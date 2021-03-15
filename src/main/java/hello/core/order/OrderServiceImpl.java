@@ -1,16 +1,11 @@
 package hello.core.order;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.FixDiscountPolicy;
-import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
-import hello.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
-
     private final MemberRepository memberRepository;
-//    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     private final DiscountPolicy discountPolicy; // DIP, 구체적인 클래스에 대해 전혀 모름
 
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
