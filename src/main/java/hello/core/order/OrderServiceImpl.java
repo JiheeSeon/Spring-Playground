@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
        즉 위 프로세스가 사실상 같이 일어남.
 
     @Autowired
-    public void setNemberRepository(MemberRepository memberRepository){
+    public void setMemberRepository(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
 
