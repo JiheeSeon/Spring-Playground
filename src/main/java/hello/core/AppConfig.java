@@ -37,7 +37,7 @@ public class AppConfig {
     @Bean
     public MemberService memberService(){
         System.out.println("call AppConfig.memberService");
-        return new MemberServiceImpl(memberRepository()); //@autowired memberService로 대체 가능
+        return new MemberServiceImpl(memberRepository()); //@hello.core.autowired memberService로 대체 가능
     }
 
     @Bean
