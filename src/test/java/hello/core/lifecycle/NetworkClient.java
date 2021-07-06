@@ -1,5 +1,10 @@
 package hello.core.lifecycle;
 
+// javax -> 자바진영에서 공식적으로 제공하는 것
+// 즉 스프링이 아니고서도 다른 자바관련 프레임워크에서 사용 가능
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
     private String url;
 
@@ -28,6 +33,7 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    @PostConstruct
     public void init(){
         // 의존관계 주입이 끝나면
         System.out.println("NetworkClient.init");
@@ -35,6 +41,7 @@ public class NetworkClient {
         call("초기화 연결 메시지");
     }
 
+    @PreDestroy
     public void close(){
         // 스프링 컨테이너가 내려가기 전에
         System.out.println("NetworkClient.close");
