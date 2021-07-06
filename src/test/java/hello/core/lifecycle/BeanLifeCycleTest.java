@@ -18,7 +18,7 @@ public class BeanLifeCycleTest {
     @Configuration
     static class LifeCycleConfig{
 
-        @Bean
+        @Bean(initMethod = "init", destroyMethod = "close") // init method & destroy method 지정
         public NetworkClient networkClient() {
             NetworkClient networkClient = new NetworkClient();
             networkClient.setUrl("http://hello-spring.dev"); // 외부에서 값을 세팅하고 초기화할 때 많음.
