@@ -18,12 +18,13 @@ public class NetworkClient {
         System.out.println("connect : " + url);
     }
 
+    // 연결된 상태에서 서버에 메시지를 던질 수 있다고 가정
     public void call(String message) {
         System.out.println("call: " + url + " message = " + message);
     }
 
     // 서비스 종료 시 호출
     public void disconnect() {
-        System.out.println("close " + url);
+        System.out.println("close: " + url);
     }
 }
